@@ -1,0 +1,195 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 2025-07-17 04:12:34
+Description: Exception in server tick loop
+
+java.net.UnknownHostException: مرحباً أخي ماذا تفعل؟: Name or service not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:?] {}
+	at java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:934) ~[?:?] {}
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543) ~[?:?] {}
+	at java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852) ~[?:?] {}
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1533) ~[?:?] {}
+	at java.net.InetAddress.getAllByName(InetAddress.java:1385) ~[?:?] {}
+	at java.net.InetAddress.getAllByName(InetAddress.java:1306) ~[?:?] {}
+	at java.net.InetAddress.getByName(InetAddress.java:1256) ~[?:?] {}
+	at net.minecraft.server.dedicated.DedicatedServer.m_7038_(DedicatedServer.java:180) ~[server-1.20.1-20230612.114412-srg.jar%23392!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:808) ~[server-1.20.1-20230612.114412-srg.jar%23392!/:?] {re:mixin,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:APP:ru.mixin.json:MinecraftServerMixin,pl:mixin:APP:ksyxis.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:285) ~[server-1.20.1-20230612.114412-srg.jar%23392!/:?] {re:mixin,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:modernfix-common.mixins.json:perf.fix_loop_spin_waiting.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:modernfix-forge.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:APP:ru.mixin.json:MinecraftServerMixin,pl:mixin:APP:ksyxis.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at java.lang.Thread.run(Thread.java:840) [?:?] {re:mixin}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Mohist Version: 1.20.1-77cf9813
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Linux (amd64) version 6.8.0-1027-azure
+	Java Version: 17.0.15, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 823651328 bytes (785 MiB) / 2147483648 bytes (2048 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 2
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD EPYC 7763 64-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 1 Stepping 1
+	Microarchitecture: Zen 3
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 1
+	Number of logical CPUs: 2
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 3969.34
+	Virtual memory used (MB): 5564.91
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xms2G -Xmx4G
+	CraftBukkit Information: CraftServer is not running yet
+	Server Running: true
+	Data Packs: vanilla, mod:forge, mod:kuma_api, mod:supermartijn642configlib (incompatible), mod:onlyhammers (incompatible), mod:playeranimator (incompatible), mod:dynamiclights (incompatible), mod:incendium, mod:immersive_aircraft (incompatible), mod:sophisticatedcore (incompatible), mod:insanelib, mod:betterendcities, mod:prism (incompatible), mod:modernfix (incompatible), mod:citadel (incompatible), mod:zombieawareness (incompatible), mod:yungsapi, mod:mixinextras (incompatible), mod:sophisticatedbackpacks (incompatible), mod:relics, mod:sculkhorde (incompatible), mod:impactfulweather (incompatible), mod:balm, mod:fpsreducer, mod:cameraoverhaul, mod:cloth_config (incompatible), mod:sound_physics_remastered (incompatible), mod:geophilic, mod:embeddium, mod:endrem (incompatible), mod:bfendcities (incompatible), mod:supermartijn642corelib, mod:yungsbridges, mod:lionfishapi (incompatible), mod:highlighter (incompatible), mod:cataclysm (incompatible), mod:curios (incompatible), mod:cerbons_api, mod:bettervillage, mod:architectury (incompatible), mod:nerb, mod:mr_limesplatus_ending, mod:aiimprovements, mod:cupboard (incompatible), mod:betterendisland, mod:enhancedai, mod:celestisynth, mod:framework, mod:fallingtree (incompatible), mod:toms_storage (incompatible), mod:villagerinabucket, mod:enchantinginfuser, mod:mowziesmobs, mod:geckolib, mod:cave_dweller (incompatible), mod:trashslot, mod:rechiseled (incompatible), mod:chargedmobs (incompatible), mod:octolib, mod:elysium_api, mod:atistructures, mod:jei, mod:attributefix (incompatible), mod:tacz, mod:libraryferret, mod:waystones, mod:yungscavebiomes, mod:glitchcore (incompatible), mod:iceandfire, mod:farsight_view (incompatible), mod:terralith, mod:fusion, mod:watut, mod:puzzlesaccessapi, mod:wither_spawn_animation, mod:dungeons_arise, mod:nordic_structures, mod:born_in_chaos_v1, mod:distanthorizons (incompatible), mod:smoothchunk (incompatible), mod:alexscaves, mod:trade_cycling, mod:terrablender, mod:regions_unexplored (incompatible), mod:taxcp, mod:jade (incompatible), mod:mofus_better_end_, mod:culllessleaves (incompatible), mod:creativecore, mod:platform (incompatible), mod:itemproductionlib (incompatible), mod:skilltree, mod:ksyxis (incompatible), mod:pickaxetrims, mod:rottencreatures, mod:ribbits (incompatible), mod:iceberg (incompatible), mod:flywheel, mod:ponder (incompatible), mod:create, mod:gravestone, mod:legendary_monsters, mod:immediatelyfast (incompatible), mod:extrasounds, mod:coroutil (incompatible), mod:particle_effects (incompatible), mod:tlc (incompatible), mod:spore (incompatible), mod:ferritecore (incompatible), mod:visuality (incompatible), mod:skyarena, mod:puzzleslib, mod:betterf3, create:dynamic_data, insanelib:no_player_time_stop, tacz_resources
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Is Modded: Definitely; Server brand changed to 'null'
+	Type: Dedicated Server (map_server.txt)
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.5.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar mohist_implementer PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20.1-47.4.3.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		kuma-api-forge-20.1.10+1.20.1.jar                 |KumaAPI                       |kuma_api                      |20.1.10             |DONE      |Manifest: NOSIGNATURE
+		supermartijn642configlib-1.1.8-forge-mc1.20.jar   |SuperMartijn642's Config Libra|supermartijn642configlib      |1.1.8               |DONE      |Manifest: NOSIGNATURE
+		onlyhammers-com.blocklegend001.jar                |OnlyHammers                   |onlyhammers                   |1.20.1-0.6          |DONE      |Manifest: NOSIGNATURE
+		player-animation-lib-forge-1.0.2-rc1+1.20.jar     |Player Animator               |playeranimator                |1.0.2-rc1+1.20      |DONE      |Manifest: NOSIGNATURE
+		dynamiclights-1.20.1.2.jar                        |Dynamic Lights                |dynamiclights                 |1.20.1.2            |DONE      |Manifest: NOSIGNATURE
+		Incendium_1.20.x_v5.3.5.jar                       |Incendium                     |incendium                     |5.3.5               |DONE      |Manifest: NOSIGNATURE
+		immersive_aircraft-1.2.2+1.20.1-forge.jar         |Immersive Aircraft            |immersive_aircraft            |1.2.2+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		sophisticatedcore-1.20.1-1.2.71.1022.jar          |Sophisticated Core            |sophisticatedcore             |1.2.71.1022         |DONE      |Manifest: NOSIGNATURE
+		insanelib-1.21.14.jar                             |InsaneLib                     |insanelib                     |1.21.14             |DONE      |Manifest: NOSIGNATURE
+		betterendcities-1.0.0-1.20.1.jar                  |Better End Cities Vanilla     |betterendcities               |1.0.0-1.20.1        |DONE      |Manifest: NOSIGNATURE
+		Prism-1.20.1-forge-1.0.5.jar                      |Prism                         |prism                         |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		modernfix-forge-5.23.1+mc1.20.1.jar               |ModernFix                     |modernfix                     |5.23.1+mc1.20.1     |DONE      |Manifest: NOSIGNATURE
+		citadel-2.6.2-1.20.1.jar                          |Citadel                       |citadel                       |2.6.2               |DONE      |Manifest: NOSIGNATURE
+		zombieawareness-1.20.1-1.13.1.jar                 |Zombie Awareness              |zombieawareness               |1.20.1-1.13.1       |DONE      |Manifest: NOSIGNATURE
+		YungsApi-1.20-Forge-4.0.6.jar                     |YUNG's API                    |yungsapi                      |1.20-Forge-4.0.6    |DONE      |Manifest: NOSIGNATURE
+		mixinextras-forge-0.2.0-beta.6.jar                |MixinExtras                   |mixinextras                   |0.2.0-beta.6        |DONE      |Manifest: NOSIGNATURE
+		sophisticatedbackpacks-1.20.1-3.23.19.1263.jar    |Sophisticated Backpacks       |sophisticatedbackpacks        |3.23.19.1263        |DONE      |Manifest: NOSIGNATURE
+		relics-1.20.1-0.8.0.9.jar                         |Relics                        |relics                        |0.8.0.9             |DONE      |Manifest: NOSIGNATURE
+		sculkhorde-1.20.1-0.9.38.jar                      |Sculk Horde                   |sculkhorde                    |1.20.1-0.9.38       |DONE      |Manifest: NOSIGNATURE
+		BiomeParticleWeather-v4.1.0-1.20.1-Forge.jar      |Biome Particle Weather        |impactfulweather              |4.1.0               |DONE      |Manifest: NOSIGNATURE
+		balm-forge-1.20.1-7.3.31-all.jar                  |Balm                          |balm                          |7.3.31              |DONE      |Manifest: NOSIGNATURE
+		FpsReducer2-forge-1.20-2.5.jar                    |FPS Reducer                   |fpsreducer                    |1.20-2.5            |DONE      |Manifest: NOSIGNATURE
+		CameraOverhaul-v2.0.4-forge+mc[1.20.0-1.20.5].jar |CameraOverhaul                |cameraoverhaul                |2.0.4-forge+mc.1.20.|DONE      |Manifest: NOSIGNATURE
+		cloth-config-11.1.136-forge.jar                   |Cloth Config v10 API          |cloth_config                  |11.1.136            |DONE      |Manifest: NOSIGNATURE
+		sound-physics-remastered-forge-1.20.1-1.4.10.jar  |Sound Physics Remastered      |sound_physics_remastered      |1.20.1-1.4.10       |DONE      |Manifest: NOSIGNATURE
+		Geophilic v3.3 f15-71.jar                         |Geophilic                     |geophilic                     |3.3                 |DONE      |Manifest: NOSIGNATURE
+		embeddium-0.3.21+mc1.20.1.jar                     |Embeddium                     |embeddium                     |0.3.31+mc1.20.1     |DONE      |Manifest: NOSIGNATURE
+		endrem_forge-5.3.3-R-1.20.1.jar                   |End Remastered                |endrem                        |5.3.3-R-1.20.1      |DONE      |Manifest: NOSIGNATURE
+		bfendcities-1.0.jar                               |Big F&$%ing End Cities        |bfendcities                   |1.0                 |DONE      |Manifest: NOSIGNATURE
+		supermartijn642corelib-1.1.17a-forge-mc1.20.1.jar |SuperMartijn642's Core Lib    |supermartijn642corelib        |1.1.17+a            |DONE      |Manifest: NOSIGNATURE
+		YungsBridges-1.20-Forge-4.0.3.jar                 |YUNG's Bridges                |yungsbridges                  |1.20-Forge-4.0.3    |DONE      |Manifest: NOSIGNATURE
+		lionfishapi-2.4-Fix.jar                           |LionfishAPI                   |lionfishapi                   |2.4-Fix             |DONE      |Manifest: NOSIGNATURE
+		Highlighter-1.20.1-forge-1.1.9.jar                |Highlighter                   |highlighter                   |1.1.9               |DONE      |Manifest: NOSIGNATURE
+		L_Enders_Cataclysm 1.20.1-2.66.jar                |cataclysm                     |cataclysm                     |2.65                |DONE      |Manifest: NOSIGNATURE
+		curios-forge-5.14.1+1.20.1.jar                    |Curios API                    |curios                        |5.14.1+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		CerbonsAPI-Forge-1.20.1-1.1.0.jar                 |Cerbons API                   |cerbons_api                   |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		bettervillage-forge-1.20.1-3.3.1-all.jar          |Better village                |bettervillage                 |3.3.1               |DONE      |Manifest: NOSIGNATURE
+		architectury-9.2.14-forge.jar                     |Architectury                  |architectury                  |9.2.14              |DONE      |Manifest: NOSIGNATURE
+		Not Enough Recipe Book-FORGE-0.4.1+1.20.1.jar     |Not Enough Recipe Book        |nerb                          |0.4.1               |DONE      |Manifest: NOSIGNATURE
+		tru.e-ending-v1.1.0c.jar                          |True Ending: Ender Dragon Over|mr_limesplatus_ending         |1-v1.1.0c           |DONE      |Manifest: NOSIGNATURE
+		AI-Improvements-1.20-0.5.2.jar                    |AI-Improvements               |aiimprovements                |0.5.2               |DONE      |Manifest: NOSIGNATURE
+		cupboard-1.20.1-2.7.jar                           |Cupboard utilities            |cupboard                      |1.20.1-2.7          |DONE      |Manifest: NOSIGNATURE
+		YungsBetterEndIsland-1.20-Forge-2.0.6.jar         |YUNG's Better End Island      |betterendisland               |1.20-Forge-2.0.6    |DONE      |Manifest: NOSIGNATURE
+		enhancedai-2.6.8.jar                              |Enhanced AI                   |enhancedai                    |2.6.8               |DONE      |Manifest: NOSIGNATURE
+		celestisynth-1.20.1-1.3.1.jar                     |Celestisynth                  |celestisynth                  |1.20.1-1.3.1        |DONE      |Manifest: NOSIGNATURE
+		framework-forge-1.20.1-0.7.12.jar                 |Framework                     |framework                     |0.7.12              |DONE      |Manifest: 0d:78:5f:44:c0:47:0c:8c:e2:63:a3:04:43:d4:12:7d:b0:7c:35:37:dc:40:b1:c1:98:ec:51:eb:3b:3c:45:99
+		FallingTree-1.20.1-4.3.4.jar                      |FallingTree                   |fallingtree                   |4.3.4               |DONE      |Manifest: 3c:8e:df:6c:df:a6:2a:9f:af:64:ea:04:9a:cf:65:92:3b:54:93:0e:96:50:b4:52:e1:13:42:18:2b:ae:40:29
+		toms_storage-1.20-1.7.1.jar                       |Tom's Simple Storage Mod      |toms_storage                  |1.7.1               |DONE      |Manifest: NOSIGNATURE
+		villagerinabucket-1.20.1-1.4.2.jar                |Villager In A Bucket          |villagerinabucket             |1.20.1-1.4.2        |DONE      |Manifest: NOSIGNATURE
+		EnchantingInfuser-v8.0.3-1.20.1-Forge.jar         |Enchanting Infuser            |enchantinginfuser             |8.0.3               |DONE      |Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		mowziesmobs-1.7.3.jar                             |Mowzie's Mobs                 |mowziesmobs                   |1.7.3               |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.20.1-4.7.2.jar                   |GeckoLib 4                    |geckolib                      |4.7.2               |DONE      |Manifest: NOSIGNATURE
+		cave_dweller-1.20.1-1.6.4.jar                     |cave_dweller                  |cave_dweller                  |1.6.4               |DONE      |Manifest: NOSIGNATURE
+		trashslot-forge-1.20-15.1.1.jar                   |TrashSlot                     |trashslot                     |15.1.1              |DONE      |Manifest: NOSIGNATURE
+		rechiseled-1.1.5c-forge-mc1.20.jar                |Rechiseled                    |rechiseled                    |1.1.5c              |DONE      |Manifest: NOSIGNATURE
+		ChargedMobs-forge-2.1.1.jar                       |ChargedMobs                   |chargedmobs                   |2.1.1               |DONE      |Manifest: NOSIGNATURE
+		OctoLib-FORGE-0.5.0.1+1.20.1.jar                  |OctoLib                       |octolib                       |0.5.0.1             |DONE      |Manifest: NOSIGNATURE
+		ElysiumAPI-1.20.1-1.1.3.jar                       |Elysium                       |elysium_api                   |1.1.3               |DONE      |Manifest: NOSIGNATURE
+		ATi Structures V1.4.3 (1.20+).jar                 |Structory                     |atistructures                 |1.4.0               |DONE      |Manifest: NOSIGNATURE
+		jei-1.20.1-forge-15.20.0.106.jar                  |Just Enough Items             |jei                           |15.20.0.106         |DONE      |Manifest: NOSIGNATURE
+		AttributeFix-Forge-1.20.1-21.0.4.jar              |AttributeFix                  |attributefix                  |21.0.4              |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		tacz-1.20.1-1.1.6-hotfix.jar                      |Timeless & Classics Guns: Zero|tacz                          |1.1.6-hotfix        |DONE      |Manifest: NOSIGNATURE
+		libraryferret-forge-1.20.1-4.0.0.jar              |Library ferret                |libraryferret                 |4.0.0               |DONE      |Manifest: NOSIGNATURE
+		waystones-forge-1.20.1-14.1.13.jar                |Waystones                     |waystones                     |14.1.13             |DONE      |Manifest: NOSIGNATURE
+		YungsCaveBiomes-1.20.1-Forge-2.0.5.jar            |YUNG's Cave Biomes            |yungscavebiomes               |1.20.1-Forge-2.0.5  |DONE      |Manifest: NOSIGNATURE
+		GlitchCore-forge-1.20.1-0.0.1.1.jar               |GlitchCore                    |glitchcore                    |0.0.1.1             |DONE      |Manifest: NOSIGNATURE
+		iceandfire-2.1.13-1.20.1-beta-5.jar               |Ice and Fire                  |iceandfire                    |2.1.13-1.20.1       |DONE      |Manifest: NOSIGNATURE
+		farsight-1.20.1-3.7.jar                           |Farsight mod                  |farsight_view                 |1.20.1-3.7          |DONE      |Manifest: NOSIGNATURE
+		Terralith_1.20.x_v2.5.4.jar                       |Terralith                     |terralith                     |2.5.4               |DONE      |Manifest: NOSIGNATURE
+		fusion-1.2.6b-forge-mc1.20.1.jar                  |Fusion                        |fusion                        |1.2.6+b             |DONE      |Manifest: NOSIGNATURE
+		watut-forge-1.20.1-1.2.3.jar                      |What Are They Up To           |watut                         |1.20.1-1.2.3        |DONE      |Manifest: NOSIGNATURE
+		puzzlesaccessapi-forge-20.1.1.jar                 |Puzzles Access Api            |puzzlesaccessapi              |20.1.1              |DONE      |Manifest: NOSIGNATURE
+		forge-1.20.1-47.4.3-universal.jar                 |Forge                         |forge                         |47.4.3              |DONE      |Manifest: NOSIGNATURE
+		wither_spawn_animation-1.5.2-forge-1.20.1.jar     |Wither Spawn Animation        |wither_spawn_animation        |1.5.2               |DONE      |Manifest: NOSIGNATURE
+		DungeonsArise-1.20.x-2.1.58-release.jar           |When Dungeons Arise           |dungeons_arise                |2.1.58-1.20.x       |DONE      |Manifest: NOSIGNATURE
+		server-1.20.1-20230612.114412-srg.jar             |Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: NOSIGNATURE
+		nordic_structures-1.6.9-forge-1.20.1.jar          |Nordic Structures             |nordic_structures             |1.6.9               |DONE      |Manifest: NOSIGNATURE
+		born_in_chaos_[Forge]1.20.1_1.7.jar               |Born in Chaos                 |born_in_chaos_v1              |1.7                 |DONE      |Manifest: NOSIGNATURE
+		DistantHorizons-fabric-forge-2.3.2-b-1.20.1.jar   |Distant Horizons              |distanthorizons               |2.3.2-b             |DONE      |Manifest: NOSIGNATURE
+		smoothchunk-1.20.1-4.1.jar                        |Smoothchunk mod               |smoothchunk                   |1.20.1-4.1          |DONE      |Manifest: NOSIGNATURE
+		alexscaves-2.0.2.jar                              |Alex's Caves                  |alexscaves                    |2.0.2               |DONE      |Manifest: NOSIGNATURE
+		trade-cycling-forge-1.20.1-1.0.18.jar             |Trade Cycling                 |trade_cycling                 |1.20.1-1.0.18       |DONE      |Manifest: NOSIGNATURE
+		TerraBlender-forge-1.20.1-3.0.1.10.jar            |TerraBlender                  |terrablender                  |3.0.1.10            |DONE      |Manifest: NOSIGNATURE
+		RegionsUnexploredForge-0.5.6+1.20.1.jar           |Regions Unexplored            |regions_unexplored            |0.5.6               |DONE      |Manifest: NOSIGNATURE
+		TaxCastlePillager+M.1.20.1+ForM.1.0.1.jar         |Tax' Castle Pillager          |taxcp                         |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		Jade-1.20.1-Forge-11.13.1.jar                     |Jade                          |jade                          |11.13.1+forge       |DONE      |Manifest: NOSIGNATURE
+		mofus_broken_constellation-0.9.0-forge-1.20.1.jar |Mofu's better end             |mofus_better_end_             |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		CullLessLeaves-Reforged-1.20.1-1.0.5.jar          |Cull Less Leaves Reforged     |culllessleaves                |1.20.1-1.0.5        |DONE      |Manifest: NOSIGNATURE
+		CreativeCore_FORGE_v2.12.32_mc1.20.1.jar          |CreativeCore                  |creativecore                  |2.12.32             |DONE      |Manifest: NOSIGNATURE
+		Platform-forge-1.20.1-1.2.10.1.jar                |Platform                      |platform                      |1.2.10.1            |DONE      |Manifest: NOSIGNATURE
+		ItemProductionLib-1.20.1-1.0.2a-all.jar           |Item Production Lib           |itemproductionlib             |1.0.2a              |DONE      |Manifest: NOSIGNATURE
+		PassiveSkillTree-1.20.1-BETA-0.6.14a-all.jar      |Passive Skill Tree            |skilltree                     |0.6.14a             |DONE      |Manifest: NOSIGNATURE
+		Ksyxis-1.3.3.jar                                  |Ksyxis                        |ksyxis                        |1.3.3               |DONE      |Manifest: NOSIGNATURE
+		betterpickaxetrims-forge-1.20.1-1.0.1.jar         |Better Pickaxe Trims          |pickaxetrims                  |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		rottencreatures-forge-1.20.1-1.1.0.jar            |Rotten Creatures              |rottencreatures               |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		Ribbits-1.20.1-Forge-3.0.4.jar                    |Ribbits                       |ribbits                       |1.20.1-Forge-3.0.4  |DONE      |Manifest: NOSIGNATURE
+		Iceberg-1.20.1-forge-1.1.25.jar                   |Iceberg                       |iceberg                       |1.1.25              |DONE      |Manifest: NOSIGNATURE
+		flywheel-forge-1.20.1-1.0.1.jar                   |Flywheel                      |flywheel                      |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		Ponder-Forge-1.20.1-1.0.51.jar                    |Ponder                        |ponder                        |1.0.51              |DONE      |Manifest: NOSIGNATURE
+		create-1.20.1-6.0.2.jar                           |Create                        |create                        |6.0.2               |DONE      |Manifest: NOSIGNATURE
+		gravestone-forge-1.20.1-1.0.24.jar                |Gravestone Mod                |gravestone                    |1.20.1-1.0.24       |DONE      |Manifest: NOSIGNATURE
+		legendarymonsters-1.9.7 MC 1.20.1.jar             |LegendaryMonsters             |legendary_monsters            |1.20.1              |DONE      |Manifest: NOSIGNATURE
+		ImmediatelyFast-Forge-1.5.0+1.20.4.jar            |ImmediatelyFast               |immediatelyfast               |1.5.0+1.20.4        |DONE      |Manifest: NOSIGNATURE
+		ExtraSoundsNext-forge-1.20.1-1.4.jar              |ExtraSoundsNext               |extrasounds                   |1.4                 |DONE      |Manifest: NOSIGNATURE
+		coroutil-forge-1.20.1-1.3.7.jar                   |CoroUtil                      |coroutil                      |1.20.1-1.3.7        |DONE      |Manifest: NOSIGNATURE
+		particle_effects-1.20.1-Forge-1.0.1.jar           |Particle Effects              |particle_effects              |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		tlc_forge-1.0.3-R-1.20.X.jar                      |The Lost Castle               |tlc                           |1.0.2               |DONE      |Manifest: NOSIGNATURE
+		spore_1.20.1_2.1.4c.jar                           |Spore                         |spore                         |2.1.4               |DONE      |Manifest: NOSIGNATURE
+		ferritecore-6.0.1-forge.jar                       |Ferrite Core                  |ferritecore                   |6.0.1               |DONE      |Manifest: 41:ce:50:66:d1:a0:05:ce:a1:0e:02:85:9b:46:64:e0:bf:2e:cf:60:30:9a:fe:0c:27:e0:63:66:9a:84:ce:8a
+		visuality-forge-2.0.2.jar                         |Visuality: Reforged           |visuality                     |2.0.2               |DONE      |Manifest: NOSIGNATURE
+		SkyArena-1.3.0.jar                                |Sky Arena                     |skyarena                      |1.3.0               |DONE      |Manifest: NOSIGNATURE
+		PuzzlesLib-v8.1.32-1.20.1-Forge.jar               |Puzzles Lib                   |puzzleslib                    |8.1.32              |DONE      |Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		BetterF3-7.0.2-Forge-1.20.1.jar                   |BetterF3                      |betterf3                      |7.0.2               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: a3f78ec6-535b-4eaa-ac71-a4277f10a912
+	FML: 0.0
+	Forge: net.minecraftforge:47.4.3

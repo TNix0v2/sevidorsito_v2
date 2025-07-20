@@ -1,0 +1,24 @@
+worlds:
+  world:
+    worldborder: 5.9999968E7
+    difficulty: HARD
+    seed: 3803891889904790280
+    environment: NORMAL
+    name: world
+    info: -/-
+    mohist: false
+    keepspawninmemory: true
+  DIM-1:
+    worldborder: 5.9999968E7
+  DIM1:
+    worldborder: 5.9999968E7
+  broken_constellation:
+    worldborder: 5.9999968E7
+    ismods: true
+    modName: mofus_better_end_
+  world/DIM-1:
+    difficulty: EASY
+  world/DIM1:
+    difficulty: EASY
+  world/mofus_better_end_/broken_constellation:
+    difficulty: EASY
